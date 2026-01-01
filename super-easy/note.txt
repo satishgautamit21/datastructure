@@ -1,0 +1,361 @@
+
+## 🔰 Super Easy FAANG Coding Problems (With Patterns)
+
+---
+
+### 1️⃣ Write a program to find the **maximum element** in an array.
+
+**Pattern:** Linear scan
+**Concept:** Arrays, loops
+
+---
+
+### 3️⃣ Write a program to **reverse a string**.
+
+**Pattern:** Two pointers / string traversal
+**Concept:** Strings
+
+---
+
+### 4️⃣ Write a program to check whether a **string is a palindrome**.
+
+**Pattern:** Two pointers
+**Concept:** String comparison
+
+---
+
+### 6️⃣ Write a program to **count vowels** in a given string.
+
+**Pattern:** Frequency count
+**Concept:** Strings, loops
+
+---
+
+### 7️⃣ Write a program to **remove spaces** from a string.
+
+**Pattern:** String filtering
+**Concept:** Strings
+
+---
+
+### 8️⃣ Write a program to **find the sum of all elements** in an array.
+
+**Pattern:** Accumulator
+**Concept:** Arrays
+
+---
+
+### 🔟 Write a program to **find factorial** of a number.
+
+**Pattern:** Iterative multiplication / recursion
+**Concept:** Math
+
+---
+
+### 1️⃣1️⃣ Write a program to **find the second largest element** in an array.
+
+**Pattern:** Single pass tracking
+**Concept:** Arrays
+
+---
+
+### 1️⃣2️⃣ Write a program to **count frequency of characters** in a string.
+
+**Pattern:** Hash map / frequency map
+**Concept:** Strings, maps
+
+---
+
+### 1️⃣3️⃣ Write a program to **check if two strings are anagrams**.
+
+**Pattern:** Frequency map / sorting
+**Concept:** Strings
+
+---
+
+### 1️⃣4️⃣ Write a program to **remove duplicate elements** from an array.
+
+**Pattern:** Hash set
+**Concept:** Arrays, sets
+
+---
+
+### 1️⃣5️⃣ Write a program to **find common elements** between two arrays.
+
+**Pattern:** Hash set lookup
+**Concept:** Arrays
+
+---
+
+### 1️⃣6️⃣ Write a program to **count the number of digits** in a number.
+
+**Pattern:** Digit extraction
+**Concept:** Math
+
+---
+
+### 1️⃣7️⃣ Write a program to **reverse a number**.
+
+**Pattern:** Digit extraction
+**Concept:** Math
+
+---
+
+### 1️⃣8️⃣ Write a program to check whether a number is an **Armstrong number**.
+
+**Pattern:** Digit power sum
+**Concept:** Math
+
+---
+
+### 1️⃣9️⃣ Write a program to **rotate an array by 1 position**.
+
+**Pattern:** Element shifting
+**Concept:** Arrays
+
+---
+
+### 2️⃣0️⃣ Write a program to **find the first non-repeating character** in a string.
+
+**Pattern:** Frequency map + linear scan
+**Concept:** Strings
+
+---
+
+## 🧠 Common Patterns FAANG Expects at Easy Level
+
+| Pattern          | Where Used                |
+| ---------------- | ------------------------- |
+| Linear Scan      | Max, Min, Sum             |
+| Two Pointers     | Reverse, Palindrome       |
+| Frequency Map    | Anagram, Count chars      |
+| Hash Set         | Duplicates, Intersection  |
+| Digit Extraction | Reverse number, Armstrong |
+| Accumulator      | Sum, Factorial            |
+
+---
+
+## 🎯 FAANG Interview Reality (Important)
+
+For **super-easy problems**, interviewers mainly check:
+
+* Clean code
+* Edge cases
+* Time & space complexity explanation
+* Can you solve it **without Googling**
+
+---
+
+Perfect 👍
+These **Top 10 must-memorize patterns** cover **80–85% of Easy → Medium FAANG questions**, especially in **JavaScript / Node / React interviews** (very relevant for you).
+
+I’ll keep it **crisp, interview-oriented, and easy to recall**.
+
+---
+
+# 🔥 Top 10 Must-Memorize Coding Patterns (FAANG)
+
+---
+
+## 1️⃣ Linear Scan (Single Pass)
+
+**When to use:**
+Find min, max, sum, count, condition match.
+
+**Template idea:**
+
+```js
+for (let i = 0; i < arr.length; i++) {
+  // update answer
+}
+```
+
+**Used in:**
+Max element, sum of array, count vowels
+**Time:** O(n)
+
+---
+
+## 2️⃣ Two Pointers
+
+**When to use:**
+Reversal, palindrome, sorted array problems.
+
+**Template idea:**
+
+```js
+let left = 0, right = arr.length - 1;
+while (left < right) {
+  left++;
+  right--;
+}
+```
+
+**Used in:**
+Reverse string, palindrome check
+**Time:** O(n)
+
+---
+
+## 3️⃣ Sliding Window
+
+**When to use:**
+Subarray / substring of fixed or variable size.
+
+**Template idea:**
+
+```js
+let left = 0;
+for (let right = 0; right < n; right++) {
+  // expand window
+  // shrink window if needed
+}
+```
+
+**Used in:**
+Max sum subarray, longest substring
+**Time:** O(n)
+
+---
+
+## 4️⃣ Frequency Map (Hash Map)
+
+**When to use:**
+Counting, duplicates, matching patterns.
+
+**Template idea:**
+
+```js
+const map = {};
+map[x] = (map[x] || 0) + 1;
+```
+
+**Used in:**
+Anagrams, first non-repeating char
+**Time:** O(n)
+
+---
+
+## 5️⃣ Hash Set (Existence Check)
+
+**When to use:**
+Duplicate detection, fast lookup.
+
+**Template idea:**
+
+```js
+const set = new Set();
+if (set.has(x)) {}
+set.add(x);
+```
+
+**Used in:**
+Remove duplicates, intersection
+**Time:** O(n)
+
+---
+
+## 6️⃣ Prefix Sum
+
+**When to use:**
+Range sum queries, subarray sum problems.
+
+**Template idea:**
+
+```js
+prefix[i] = prefix[i - 1] + arr[i];
+```
+
+**Used in:**
+Subarray sum equals K
+**Time:** O(n)
+
+---
+
+## 7️⃣ Sorting + Scan
+
+**When to use:**
+Order matters or easier grouping.
+
+**Template idea:**
+
+```js
+arr.sort((a, b) => a - b);
+```
+
+**Used in:**
+Anagrams, merge intervals
+**Time:** O(n log n)
+
+---
+
+## 8️⃣ Binary Search
+
+**When to use:**
+Sorted data, monotonic condition.
+
+**Template idea:**
+
+```js
+while (low <= high) {
+  const mid = Math.floor((low + high) / 2);
+}
+```
+
+**Used in:**
+Search element, first/last position
+**Time:** O(log n)
+
+---
+
+## 9️⃣ Recursion (Basic)
+
+**When to use:**
+Repeating sub-problems, tree traversal.
+
+**Template idea:**
+
+```js
+function dfs(x) {
+  if (base) return;
+  dfs(next);
+}
+```
+
+**Used in:**
+Factorial, Fibonacci, tree DFS
+**Time:** Depends
+
+---
+
+## 🔟 Stack Pattern
+
+**When to use:**
+Previous/next element, parentheses problems.
+
+**Template idea:**
+
+```js
+const stack = [];
+stack.push(x);
+stack.pop();
+```
+
+**Used in:**
+Valid parentheses, next greater element
+**Time:** O(n)
+
+---
+
+## 🧠 One-Line Memory Trick
+
+> **Array? → Scan**
+> **Reverse / Palindrome? → Two pointers**
+> **Substring / Subarray? → Sliding window**
+> **Counting? → Map**
+> **Duplicates? → Set**
+> **Range sum? → Prefix sum**
+> **Sorted search? → Binary search**
+> **Nested structure? → Stack / Recursion**
+
+---

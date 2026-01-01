@@ -1,0 +1,12 @@
+1. Alway think, can we reduce space ? i.e. do we 
+really need that variable or we can get rid of it.
+
+2. For searching item present in an array set can be efficient. It has has() method
+which take constant time to check if item exist.
+
+3. Accumulator - This is similar to reduce function. Can be utilised to sum all item or array or
+concat a string
+
+4. "for of" loop for iteration over array and "for in" for iteration over object
+
+5. freq counter
