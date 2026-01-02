@@ -24,3 +24,5 @@ for (let char of str2) {
 8. digit extraction - We make use of modular operator to get last digit
 
 9. rotating number - We can use slice method
+
+10. sum of a number raniging 1 - n is n*(n+1)/2
