@@ -1,0 +1,104 @@
+## ✅ **Refined EASY FAANG List (Pattern-Based, No Overlap with Very Easy)**
+
+### 🧩 **Arrays**
+
+1. Find **missing number** in range `0..n`
+2. Find **duplicate number** in an array
+3. Check if array is **sorted & rotated**
+4. Find **intersection** of two arrays (unique)
+5. Find **union** of two arrays (unique)
+6. Move all **zeros to end** (stable)
+7. Rearrange array to **alternate positive & negative**
+8. Find **leaders** in an array
+9. Find **equilibrium index**
+10. Find **majority element** (> n/2)
+11. Find **kth smallest element** (no sorting)
+12. Check if array elements are **consecutive**
+13. Find **subarray with given sum** (positive nums)
+14. Find **longest increasing contiguous subarray**
+15. Find **product of array except self**
+16. Merge **two sorted arrays** (no extra space)
+17. Find **minimum in rotated sorted array**
+18. Count **inversions** (brute / optimized idea)
+19. Find **peak element**
+20. Split array into **equal sum parts**
+
+---
+
+### 🔤 **Strings**
+
+21. Find **first repeating character**
+22. Find **longest common prefix**
+23. Check if string is **rotation** of another
+24. Find **all duplicate characters**
+25. Remove **consecutive duplicates**
+26. Check if string contains **all unique characters**
+27. Count **words** in a string
+28. Find **longest word** in a sentence
+29. Check if string is **valid palindrome** (ignore symbols)
+30. Find **character with max frequency**
+31. Check if two strings differ by **one edit**
+32. Remove **all occurrences of a character**
+33. Find **index of first unique char**
+34. Check if string has **balanced parentheses**
+35. Compress string (`aabcc → a2b1c2`)
+36. Find **all anagram indices** in a string
+37. Check if string is **isomorphic**
+38. Reverse **words in a sentence**
+39. Find **smallest window** containing another string
+40. Count **distinct substrings** (basic)
+
+---
+
+### 🧮 **Hashing / Sets / Maps**
+
+41. Find **pair with given sum**
+42. Count **pairs with difference k**
+43. Find **most frequent element**
+44. Find **elements appearing more than n/k times**
+45. Group **anagrams**
+46. Find **common characters** in all strings
+47. Check if array is **subset** of another
+48. Find **longest consecutive sequence**
+49. Count **distinct elements in every window (k)**
+50. Find **zero-sum subarray**
+51. Find **subarray with equal 0s and 1s**
+52. Check if pairs can be formed **divisible by k**
+53. Find **smallest repeating window**
+54. Check if array has **duplicate within k distance**
+55. Find **first non-repeating number** in stream
+
+---
+
+### 🔁 **Two Pointers / Sliding Window**
+
+56. Find **pair with sum in sorted array**
+57. Remove duplicates **in-place** (sorted array)
+58. Find **longest substring without repeating chars**
+59. Find **max sum subarray of size k**
+60. Find **minimum size subarray with sum ≥ S**
+61. Sort array of **0s, 1s, 2s**
+62. Find **triplet with zero sum**
+63. Count **subarrays with sum = k**
+64. Find **container with most water**
+65. Find **longest palindrome substring** (expand center)
+
+---
+
+### 🔢 **Math / Numbers**
+
+66. Check if number is **power of 2**
+67. Count **set bits**
+68. Find **GCD / LCM**
+69. Convert **decimal to binary**
+70. Check if number is **prime** (optimized)
+71. Find **trailing zeros in factorial**
+72. Reverse bits of a number
+73. Check **perfect number**
+74. Find **Nth Fibonacci** (optimized)
+75. Count digits **using log**
+76. Find **square root** (binary search)
+77. Check **happy number**
+78. Find **sum of digits until single digit**
+79. Check **ugly number**
+80. Find **missing ranges**

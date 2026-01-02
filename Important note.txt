@@ -9,7 +9,8 @@ concat a string
 
 4. "for of" loop for iteration over array and "for in" for iteration over object
 
-5. freq counter
+5. freq counter. When key is clearly mentioned as string and also it is not very huge. go with object
+based solution otherwise go with Map based solution.
 
 6. in anagram problems we didn't need to create another object
 
@@ -21,3 +22,5 @@ for (let char of str2) {
 7. Both Set and Map preserve insertion order. Map is useful when you need frequency or additional info
 
 8. digit extraction - We make use of modular operator to get last digit
+
+9. rotating number - We can use slice method
