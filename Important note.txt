@@ -1,5 +1,8 @@
 1. Alway think, can we reduce space ? i.e. do we really need that variable or we can get rid of it.
 
+1.1 To check if a string is palindrome or not we need not to reverse then check. A more better
+approch could be using two pointer approch and return as soon as character mismatch. 
+
 2. For searching multiple item present in an array set can be efficient than "includes()". It has has() method
 which take constant time to check if item exist.
 - When to choose set

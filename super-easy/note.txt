@@ -32,20 +32,6 @@
 
 ---
 
-### 8️⃣ Write a program to **find the sum of all elements** in an array.
-
-**Pattern:** Accumulator
-**Concept:** Arrays
-
----
-
-### 🔟 Write a program to **find factorial** of a number.
-
-**Pattern:** Iterative multiplication / recursion
-**Concept:** Math
-
----
-
 ### 1️⃣1️⃣ Write a program to **find the second largest element** in an array.
 
 **Pattern:** Single pass tracking
