@@ -1,8 +1,16 @@
-1. Alway think, can we reduce space ? i.e. do we 
-really need that variable or we can get rid of it.
+1. Alway think, can we reduce space ? i.e. do we really need that variable or we can get rid of it.
 
-2. For searching item present in an array set can be efficient. It has has() method
+2. For searching multiple item present in an array set can be efficient than "includes()". It has has() method
 which take constant time to check if item exist.
+- When to choose set
+ When array is large.
+ Multiple item to be searched.
+ Performance required
+
+ - When not to choose
+   When array is small.
+   Single item to be searched.
+
 
 3. Accumulator - This is similar to reduce function. Can be utilised to sum all item or array or
 concat a string
@@ -26,3 +34,7 @@ for (let char of str2) {
 9. rotating number - We can use slice method
 
 10. sum of a number raniging 1 - n is n*(n+1)/2
+
+11. Floyd cycle algorithm can be used where we have range between 1 to n with an array size
+n+1 and having only one element repeacted. It is useful when solution is required with 
+a spcae complexity of O(1)

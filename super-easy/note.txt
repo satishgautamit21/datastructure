@@ -1,12 +1,6 @@
 
 ## 🔰 Super Easy FAANG Coding Problems (With Patterns)
 
----
-
-### 1️⃣ Write a program to find the **maximum element** in an array.
-
-**Pattern:** Linear scan
-**Concept:** Arrays, loops
 
 ---
 
