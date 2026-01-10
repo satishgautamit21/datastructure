@@ -4,6 +4,20 @@ If no exact LC problem exists, I’ve marked it as **“Concept-based / Variant�
 
 ---
 
+### 1️⃣1️⃣ Write a program to **find the second largest element** in an array.
+
+**Pattern:** Single pass tracking
+**Concept:** Arrays
+
+---
+### 1️⃣3️⃣ Write a program to **check if two strings are anagrams**.
+
+**Pattern:** Frequency map / sorting
+**Concept:** Strings
+
+
+
+
 ## 🧩 Arrays
 
 1. Missing number in range `0..n` → **LC 268**
