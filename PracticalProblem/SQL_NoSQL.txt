@@ -1,0 +1,131 @@
+SQL frequently asked query
+
+- 2nd Max Salary in employee table
+
+SELECT DISTINCT salary 
+FROM employees 
+ORDER BY salary DESC 
+LIMIT 1 OFFSET 1; // ofset can be increased to get 3rd ,4th and so on ... salary.
+
+- Find Duplicate Records in a Table
+
+SELECT email, COUNT(*) 
+FROM users 
+GROUP BY email 
+HAVING COUNT(*) > 1;
+
+
+- Get Employee Count Department-Wise
+
+SELECT department, COUNT(*) AS employee_count 
+FROM employees 
+GROUP BY department;
+
+- Get distinct columns out of table
+
+SELECT DISTINCT salary 
+FROM employees
+
+- Condition with more than i match
+
+SELECT * FROM Customers WHERE City IN ('Paris','London');
+
+- When working with multiple condition 
+
+SELECT * FROM Customers WHERE Country = 'Germany' AND City = 'Berlin' 
+AND PostalCode > 12000; 
+
+- Aggregate Function  
+
+SELECT MIN(column_name) FROM table_name WHERE condition; 
+
+
+The most commonly used SQL aggregate functions are: 
+
+MIN() - returns the smallest value within the selected column 
+
+MAX() - returns the largest value within the selected column 
+
+COUNT() - returns the number of rows in a set 
+
+SUM() - returns the total sum of a numerical column 
+
+AVG() - returns the average value of a numerical column 
+
+
+- The HAVING clause was added to SQL because the WHERE keyword cannot be used with aggregate functions. 
+
+SELECT column_name(s) 
+FROM table_name 
+WHERE condition 
+GROUP BY column_name(s) 
+HAVING condition; 
+
+- Join or Inner join
+JOIN and INNER JOIN will return the same result.
+
+- Join Multiple table 
+
+SELECT o.order_id, c.customer_name, o.order_date, o.total_amount
+FROM orders o
+JOIN customers c ON o.customer_id = c.customer_id
+WHERE o.order_date > '2023-01-01';
+
+- Calculate Aggregate Functions (e.g., Total Sales Per Customer)
+
+SELECT customer_id, SUM(total_amount) AS total_sales
+FROM orders
+GROUP BY customer_id;
+
+- Subquery 
+
+We can pass a whole new query as a part of condition in sql query also called sub-query
+========================================Mongo DB===============================================
+ - update a document 
+
+db.collection('users').updateOne(
+    { email: 'johndoe@example.com' },
+    { $set: { age: 31 } }
+);
+
+ - deleteOne
+
+db.collection('users').deleteOne({ email: 'johndoe@example.com' });
+
+
+- insertOne
+
+db.collection('users').insertOne({
+    name: 'John Doe',
+    email: 'johndoe@example.com',
+    age: 30
+});
+
+- get the total number of users in each age group
+
+db.collection('users').aggregate([
+    { 
+    	$group: { _
+    		id: "$age", 
+    		total_users: { 
+    			$sum: 1 
+    		} 
+     	}
+     }
+]);
+
+- perform a join-like operation in MongoDB
+
+db.orders.aggregate([
+    { 
+        $lookup: {
+            from: "users", 
+            localField: "user_id", 
+            foreignField: "_id", 
+            as: "user_info"
+        }
+    }
+]);
+
+
+

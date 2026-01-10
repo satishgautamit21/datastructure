@@ -1,0 +1,92 @@
+--------------------------------------------------------------------
+Client ID	:	Turnberry
+User ID	:	00009927N
+--------------------------------------------------------------------
+kumarsingh050493@gmail.com
+username - satishg21
+
+Below account is helpful when we want to login as both root user and Iam custom user in two different tab
+root account - https://209479265181.signin.aws.amazon.com/console
+
+dummy root account - https://123456789012.signin.aws.amazon.com/console
+
+account alias - https://satishg21.signin.aws.amazon.com/console
+alias password - Sat1******Gau21#$%^&*
+
+
+iam user - satishgiam (new user creatwed)
+mfa root name - motogsatish
+
+satish gautma
+----------------------------------------------------------------------
+peace of code - how i pass developer associate exam
+-------------------------------------------------------------------------------------------------
+Account used for giving exam and getting certificate -
+https://cp.certmetrics.com/amazon/en/schedule/schedule-exam
+
+emailId  - kumarsingh.satish1@gmail.com
+
+------------------------------------------------------------------------------------------------
+As of now 
+
+Nagarro - rejected
+VidaXL - rejected
+Indeed - rejected
+DAZN - rejected
+Synechron - rejected
+Evernorth - rejected
+servicenow - HYD
+koder - rejected
+cognizant - 
+NESS - 2nd round sheduled - 40 asked - HYD
+
+--------------------------------------------------------------
+Invert a Binary Tree
+Maximum Depth of Binary Tree
+Same Tree
+Symmetric Tree
+Binary Tree Level Order Traversal
+Lowest Common Ancestor of a BST
+Path Sum
+Balanced Binary Tree
+Diameter of Binary Tree
+Convert Sorted Array to BST
+
+Find the maximum sum of k consecutive elements in an array.
+Find the smallest subarray with a sum greater than a given value.
+Find the longest substring with at most two distinct characters.
+Find the longest substring without repeating characters.
+Find the count of anagrams of a pattern in a given string.
+5. Sorting & Searching
+Implement binary search on a sorted array.
+Find the first occurrence of an element in a sorted array.
+Find the square root of a number using binary search.
+Sort an array of 0s, 1s, and 2s (Dutch National Flag problem).
+Find the kth smallest element in an array.
+6. Stack & Queue
+Implement a stack using an array.
+Implement a queue using a stack.
+Find the next greater element for each element in an array.
+Implement a basic calculator that evaluates an expression with + and -.
+Implement a queue using two stacks.
+7. Linked List
+Reverse a linked list.
+Find the middle of a linked list.
+Detect a cycle in a linked list.
+Merge two sorted linked lists.
+Find the intersection point of two linked lists.
+
+======================================================================================
+shashwat.bajpai@turnberrysolutions.com - 8630575391
+
+lakshya.bhatia@turnberrysolutions.com - 7701960445
+
+siddharth.sil@turnberrysolutions.com - 9717188449
+
+
+Mindy - mindy.nelson-kehn@turnberrysolutions.com
+kelly - kpokorny@turnberrysolutions.com
+
+
+
+

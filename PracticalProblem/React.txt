@@ -1,0 +1,424 @@
+===========================React Only============================
+
+--------- calling react function with param ----------
+
+
+const myFunction = (param) => {}
+
+<button onclick={()=> myfunction(params)} > Click <button/>
+
+===================HoC==============================
+export default function App() {
+ // HOC examples
+  const withGreeting = (WrappedComponent)=>{
+    return (props)=> {
+      const greet = "Hello"
+      return <WrappedComponent greet={greet} {...props}/>
+    }
+  }
+
+  // Simple Compnnet
+  const SimpleComponent=({greet, name})=>{
+    return `${greet} ${name}`
+  }
+
+  const EnhancedComponent = withGreeting(SimpleComponent);
+  return (
+    <div>
+      
+      <hr></hr>
+      <EnhancedComponent name="rahul"/>
+    </div>
+  );
+ =========================Dynamic Form==================
+export default function App() {
+	const [formData, setFormData] = useState({
+    	firstName: "",
+    	lastName: ""
+	  })
+	  const formFields = [
+	    {
+	      name: "firstName",
+	      label: "First Name",
+	      type: "text"
+	    },
+	    {
+	      name: "lastName",
+	      label: "Last Name",
+	      type: "text"
+	    }
+	  ]
+
+	  const handleChange=(ev)=> {
+	    const {name, value} = ev.target;
+	    setFormData({...formData, [name]: value})
+	  }
+
+	  const handleSubmit=(ev)=> {
+	    ev.preventDefault();
+	    console.log("data is ", formData.firstName);
+	  }
+	return (
+		<form onSubmit={handleSubmit}>
+	    {formFields.map(field=>{
+	      const {name, label, type} = field;
+	      return (
+	        <label key={name} style={{display: "block", margin: "10px"}}> {label} {""}
+	          <input 
+	            type={type} 
+	            name={name} 
+	            value={formData[name]}
+	            onChange={handleChange}
+	          />
+	        </label>
+	      )
+	    })}
+		    <button onClick={handleSubmit}> Submit </button>
+		    {/* <input type="submit" name="Submit"/> */}
+		</form>
+	)
+}
+==============================Life Cycle======================================
+export default function App() {
+	const [counter, setCounter] = useState(0);
+
+	// auto counter 
+	useEffect(()=>{
+	   	const timeInterval = setInterval(()=> setCounter(counter+1), 2000);
+	    return ()=> clearInterval(timeInterval);
+	},[counter]);
+
+	return (
+		<div>
+			{counter}
+    	</div>
+	)
+}
+
+//
+ Key Takeaways
+React's useEffect captures variables at the time of execution.
+
+The first function captures the initial value of counter (which is always 0).
+It doesn't see the new state on each interval call.
+State updates should use functional updates if relying on previous state.
+
+setCounter(oldVal => oldVal + 1) ensures that the latest state value is used.
+This pattern is necessary when updating state inside setInterval, setTimeout, or event listeners.
+
+
+
+Similarly we can create clock ++++++++++++++++++++
+
+import React, { useState, useEffect } from "react";
+import "./style.css";
+
+function Clock() {
+  const [dateText, setDateText] = useState({})
+  
+  useEffect(()=>{
+
+    const interval = setInterval(()=>{
+      const date = new Date();
+      const hour = date.getHours();
+      const min = date.getMinutes();
+      const sec = date.getSeconds();
+      setDateText({...dateText, hour, min, sec})
+    }, 1000);
+
+    return ()=> clearInterval(interval)
+  },[])
+  
+  return (
+    <>
+    Hour { dateText.hour} Minute: {dateText.min} Sec: {dateText.sec}
+    </>
+  );
+}
+
+export default function App() {
+  return (
+    <div>
+      <Clock />
+    </div>
+  );
+}
+
+===============================custom Hook===================================
+export default function App() {
+	const [customTodo, setCustomTodo] = useCustomHook("Sleep on Time")
+	function useCustomHook(value){
+	    const [todo, setTodo] = useState(value)
+	    return [todo, setTodo]
+	}
+
+	return (
+	<>{customTodo}</>
+	)
+}
+============================using context=================================
+import React, { useState, createContext, useContext } from "react";
+
+// Create context outside the component
+const ThemeContext = createContext();
+
+const ParentComponent = () => {
+  const [theme, setTheme] = useState("light");
+
+  return (
+    <ThemeContext.Provider value={theme}>
+      <button onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
+        Toggle Theme
+      </button>
+      <ChildComponent />
+    </ThemeContext.Provider>
+  );
+};
+
+const ChildComponent = () => {
+  const theme = useContext(ThemeContext);
+  return <div>Current theme is {theme}</div>;
+};
+
+export default ParentComponent;
+===========================usecallback==========================
+// useCallback memoizes a function so that it does not get re-created on every render. 
+// This is useful when passing functions as props to child components to avoid unnecessary re-renders.
+
+import React, { useState, useCallback } from "react";
+
+const Child = React.memo(({ handleClick }) => {
+  console.log("Child rendered");
+  return <button onClick={handleClick}>Click Me</button>;
+});
+
+export default function Parent() {
+  const [count, setCount] = useState(0);
+
+  // Without useCallback, handleClick would be re-created on every render
+  const handleClick = useCallback(() => {
+    console.log("Button clicked!");
+  }, []);
+
+  return (
+    <div>
+      <h2>Count: {count}</h2>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+      <Child handleClick={handleClick} />
+    </div>
+  );
+}
+
+Why use useCallback?
+Without useCallback, handleClick would be a new function every time Parent re-renders.
+This would cause Child to re-render unnecessarily.
+With useCallback, handleClick remains the same function reference unless dependencies change.
+
+========================== React.Memo ===========================
+// React.memo memoizes an entire component so it only re-renders when its props change.
+import React, { useState } from "react";
+
+const Child = React.memo(({ count }) => {
+  console.log("Child rendered");
+  return <h2>Child Count: {count}</h2>;
+});
+
+export default function Parent() {
+  const [count, setCount] = useState(0);
+  const [text, setText] = useState("");
+
+  return (
+    <div>
+      <h1>Parent Count: {count}</h1>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+      
+      {/* Input field does not affect Child because its prop (count) didn't change */}
+      <input value={text} onChange={(e) => setText(e.target.value)} placeholder="Type something..." />
+      
+      <Child count={count} />
+    </div>
+  );
+}
+=================================Use Memo=======================================
+// useMemo memoizes a computed value to avoid recalculating it on every render.
+import React, { useState, useMemo } from "react";
+
+export default function ExpensiveCalculation() {
+  const [count, setCount] = useState(0);
+  const [input, setInput] = useState("");
+
+  // Expensive computation that runs only when count changes
+  const squared = useMemo(() => {
+    console.log("Calculating square...");
+    return count * count;
+  }, [count]);
+
+  return (
+    <div>
+      <h2>Count: {count}</h2>
+      <h3>Squared: {squared}</h3>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+      
+      {/* This input change does not trigger the expensive calculation */}
+      <input value={input} onChange={(e) => setInput(e.target.value)} placeholder="Type something..." />
+    </div>
+  );
+}
+
+
+===============================Counter Example==================================
+import React, {useState} from "react";
+import "./style.css";
+
+
+function Counter(){
+  let [count, setCount] = useState(0);
+
+  const increment =()=> {
+    setCount(pv=> pv+1)
+  }
+
+  const decrement =()=> {
+    setCount(pv=> pv-1)
+  }
+
+  const reset =()=> {
+    setCount(0)
+  }
+
+  return (
+    <>
+    <h1>Couter value {count}</h1>
+    <button onClick={increment}>increment</button>{" "}
+    <button onClick={decrement}>decrement</button>{" "}
+    <button onClick={reset}>reset</button>
+    </>
+  )
+}
+
+
+export default function App() {
+  return (
+    <div>
+      <Counter />
+    </div>
+  );
+}
+
+
+
+===============================Todo example ====================================
+import React, {useState, useEffect} from "react";
+import "./style.css";
+
+function Task({tasks, deleteTask }){
+  return (
+    <ul>
+      {tasks.map(task=>{
+        return (
+          <li key={task}>{task} 
+            {" "}<button onClick={()=>deleteTask(task)}>Delete Task</button>
+          </li>
+          
+        )
+      })}
+    </ul>
+  )
+}
+
+function Todo(){
+  let [tasks, setTasks] = useState([]);
+  let [task, setTask] = useState("");
+
+  const addTask =()=> {
+    setTasks(pv => [...pv, task]);
+    setTask("")
+  }
+
+  
+
+  const deleteTask =(value)=> {
+    const updatedTodo = tasks.filter(task=> task!==value);
+    setTasks(updatedTodo)
+  }
+
+  const handleTask=(ev)=>{
+    const {value} = ev.target;
+    setTask(value);
+  }
+
+  return (
+    <>
+      {tasks.length > 0 && <Task tasks={tasks} deleteTask={deleteTask}/>}
+      <input 
+        placeholder = "add Task"
+        name="task"
+        value={task}
+        onChange={handleTask}
+      /> 
+      <button onClick={addTask}>Add Task</button>
+    </>
+  )
+}
+
+
+export default function App() {
+  return (
+    <div>
+      <Todo />
+    </div>
+  );
+}
+--------------------------JSON response filter-----------------
+import React, { useState, useEffect } from "react";
+import "./style.css";
+
+function Users() {
+  const [users, setUsers] = useState([]);
+  const [searchText, setSearchText] = useState("");
+
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/users")
+      .then((res) => res.json())
+      .then((json) => {
+        setUsers(json);
+      })
+      .catch((err) => {
+        console.error("Failed to fetch users:", err);
+        alert("Failed to fetch users. Please try again later.");
+      });
+  }, []);
+
+  const filteredUsers = users.filter((user) =>
+    user.name.toLowerCase().includes(searchText.toLowerCase())
+  );
+
+  const handleSearch = (ev) => {
+    setSearchText(ev.target.value);
+  };
+
+  return (
+    <>
+      <input
+        type="text"
+        placeholder="Search for user"
+        value={searchText}
+        onChange={handleSearch}
+        name="name"
+      />
+      <ul>
+        {filteredUsers.map((user) => (
+          <li key={user.id}>{user.name}</li>
+        ))}
+      </ul>
+    </>
+  );
+}
+
+export default function App() {
+  return (
+    <div>
+      <Users />
+    </div>
+  );
+}
