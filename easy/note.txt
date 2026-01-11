@@ -4,18 +4,21 @@ If no exact LC problem exists, I’ve marked it as **“Concept-based / Variant�
 
 ---
 
+### 1️⃣7️⃣ Write a program to **reverse a number**.
+
+**Pattern:** Digit extraction
+**Concept:** Math
+
+
 ### 1️⃣1️⃣ Write a program to **find the second largest element** in an array.
 
 **Pattern:** Single pass tracking
 **Concept:** Arrays
 
----
 ### 1️⃣3️⃣ Write a program to **check if two strings are anagrams**.
 
 **Pattern:** Frequency map / sorting
 **Concept:** Strings
-
-
 
 
 ## 🧩 Arrays
