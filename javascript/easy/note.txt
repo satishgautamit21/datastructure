@@ -1,9 +1,3 @@
-Great list 👍
-Below I’ve **attached LeetCode problem numbers** wherever there is a **direct or very close match**.
-If no exact LC problem exists, I’ve marked it as **“Concept-based / Variant”** (still asked in FAANG interviews).
-
----
-
 ### 1️⃣7️⃣ Write a program to **reverse a number**.
 
 **Pattern:** Digit extraction

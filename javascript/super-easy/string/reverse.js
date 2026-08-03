@@ -15,6 +15,20 @@ function getreverse(str){
     return strArr.join('');
 }
 
+// Pattern used Two pointer
+// Using Destructuring assignment
+function getreverse(str){
+    let strArr = [...str];
+    let first = 0;
+    let last = str.length -1;
+    while(first<last){
+        [strArr[first], strArr[last]] = [strArr[last], strArr[first]];
+        first++;
+        last--;
+    }
+    return strArr.join('');
+}
+
 // Using builtin method
 function getreverseWithBuiltInMethod(str){
     const reversed = [...str].reverse().join('');
