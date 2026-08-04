@@ -1,5 +1,8 @@
 // Pattern used Two pointer
-
+// Time and Space complexity is O(n)
+// because we are using two pointer and traversing the 
+// string once and space complexity is O(n) because we are 
+// creating a new array to store the reversed string
 function getreverse(str){
     let strArr = [...str];
     let first = 0;
@@ -17,6 +20,7 @@ function getreverse(str){
 
 // Pattern used Two pointer
 // Using Destructuring assignment
+// Time and Space complexity is O(n)
 function getreverse(str){
     let strArr = [...str];
     let first = 0;
