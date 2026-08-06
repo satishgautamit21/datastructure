@@ -19,5 +19,6 @@ public class FizzBuzz {
                 list.add(i);
             }
         }
+        System.out.println(list);
     }
 }
