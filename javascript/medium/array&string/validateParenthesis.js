@@ -11,7 +11,7 @@ function validateParenthesis(s) {
             stack.push(char);
         } else {
             const last = stack.pop();
-            if (map[last] !== char) {
+            if (!last || map[last] !== char) {
                 return false;
             }
         }
