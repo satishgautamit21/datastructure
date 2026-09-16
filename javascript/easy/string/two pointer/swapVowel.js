@@ -20,9 +20,10 @@ function swapVowel(str) {
     return stringArray.join('');
 }
 
+const vowelSet = new Set(['a', 'e', 'i', 'o', 'u']);
+
 function isVowel(char) {
     char = char.toLowerCase();
-    const vowelSet = new Set(['a', 'e', 'i', 'o', 'u']);
     return vowelSet.has(char);
 }
 
