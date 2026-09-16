@@ -1,4 +1,4 @@
-function binarySearch(arr, target) {
+function searchInSortedArray(arr, target) {
     let left = 0;
     let right = arr.length - 1;
 
@@ -24,9 +24,9 @@ function binarySearch(arr, target) {
 
 const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 const target = 5;
-const result = binarySearch(arr, target);
+const result = searchInSortedArray(arr, target);
 console.log(`Target ${target} found at index:`, result);
 
 const target2 = 10;
-const result2 = binarySearch(arr, target2);
+const result2 = searchInSortedArray(arr, target2);
 console.log(`Target ${target2} found at index:`, result2);

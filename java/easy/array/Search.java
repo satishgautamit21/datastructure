@@ -4,7 +4,7 @@ public class Search {
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         int target = 7;
-        int result = binarySearch(arr, target);
+        int result = searchInSortedArray(arr, target);
         if (result == -1) {
             System.out.println("Element not found in the array.");
         } else {
@@ -12,7 +12,7 @@ public class Search {
         }
     }
 
-    public static int binarySearch(int[] arr, int target) {
+    public static int searchInSortedArray(int[] arr, int target) {
         int left = 0;
         int right = arr.length - 1;
 
